@@ -1,0 +1,84 @@
+{
+    "manage": [
+        {
+            "id": 1,
+            "key_name": "user_id",
+            "description": "Contains the primary key used to identify a user of the system",
+            "type": "integer",
+            "possible_values": [
+                {
+                    "value": "null",
+                    "description": "Value when user is not found"
+                },
+                {
+                    "value": "integer",
+                    "description": "ID key of user"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "key_name": "item_id",
+            "description": "Contains the primary key used to identify a user of the system",
+            "type": "integer",
+            "possible_values": [
+                {
+                    "value": "null",
+                    "description": "Value when user is not found"
+                },
+                {
+                    "value": "integer",
+                    "description": "ID key of user"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "key_name": "user_email",
+            "description": "Contains the primary key used to identify a user of the system",
+            "type": "integer",
+            "possible_values": [
+                {
+                    "value": "null",
+                    "description": "Value when user is not found"
+                },
+                {
+                    "value": "integer",
+                    "description": "ID key of user"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "key_name": "item_views",
+            "description": "Contains the primary key used to identify a user of the system",
+            "type": "integer",
+            "possible_values": [
+                {
+                    "value": "null",
+                    "description": "Value when user is not found"
+                },
+                {
+                    "value": "integer",
+                    "description": "ID key of user"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "key_name": "item_favorites",
+            "description": "Contains the primary key used to identify a user of the system",
+            "type": "integer",
+            "possible_values": [
+                {
+                    "value": "null",
+                    "description": "Value when user is not found"
+                },
+                {
+                    "value": "integer",
+                    "description": "ID key of user"
+                }
+            ]
+        }
+    ]
+}

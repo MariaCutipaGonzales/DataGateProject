@@ -1,0 +1,10 @@
+{
+    "/manage": {
+        "target": "http://localhost:3000",
+        "secure": false
+    },
+    "/requests": {
+        "target": "http://localhost:3000",
+        "secure": false
+    }
+}
