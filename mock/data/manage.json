@@ -4,8 +4,18 @@
             "id": 1,
             "key_name": "user_id",
             "description": "Contains the primary key used to identify a user of the system",
+            "sensitivy": "This is personal data, and cannot be ...",
+            "flgSensitivy": true,
             "type": "integer",
             "possible_values": [
+                {
+                    "value": "null",
+                    "description": "Value when user is not found"
+                },
+                {
+                    "value": "integer",
+                    "description": "ID key of user"
+                },
                 {
                     "value": "null",
                     "description": "Value when user is not found"
@@ -21,6 +31,8 @@
             "key_name": "item_id",
             "description": "Contains the primary key used to identify a user of the system",
             "type": "integer",
+            "sensitivy": "This is personal data, and cannot be ...",
+            "flgSensitivy": false,
             "possible_values": [
                 {
                     "value": "null",
@@ -37,6 +49,8 @@
             "key_name": "user_email",
             "description": "Contains the primary key used to identify a user of the system",
             "type": "integer",
+            "sensitivy": "This is personal data, and cannot be ...",
+            "flgSensitivy": true,
             "possible_values": [
                 {
                     "value": "null",
@@ -53,6 +67,8 @@
             "key_name": "item_views",
             "description": "Contains the primary key used to identify a user of the system",
             "type": "integer",
+            "sensitivy": "This is personal data, and cannot be ...",
+            "flgSensitivy": false,
             "possible_values": [
                 {
                     "value": "null",
@@ -69,6 +85,8 @@
             "key_name": "item_favorites",
             "description": "Contains the primary key used to identify a user of the system",
             "type": "integer",
+            "sensitivy": "This is personal data, and cannot be ...",
+            "flgSensitivy": true,
             "possible_values": [
                 {
                     "value": "null",

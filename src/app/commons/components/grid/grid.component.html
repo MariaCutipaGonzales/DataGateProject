@@ -1,0 +1,18 @@
+<table class="app-grid table table-hover">
+  <thead>
+    <tr>
+      <th scope="col" *ngFor="let header of gridItems">{{header.text}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of data">
+      <ng-container *ngFor="let i of gridItems">
+        <td scope="row">
+          <span *ngIf="!i.status">{{item[i.element]}}</span>
+          <div *ngIf="i.status" class="btn" [ngClass]="item['statusClass']">{{item[i.element]}}</div>
+        </td>
+
+      </ng-container>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,18 @@
+@import '../../../../styles.scss';
+
+.list-group {
+    &-item {
+        background-color: $color-black;
+        color: $color-white;
+        &-action {
+            &:hover, &:focus {
+                background-color: $color-green;
+            }
+        }
+
+        &.active {
+            background-color: $color-green;
+            border-color: $color-green;
+        }
+    }
+}

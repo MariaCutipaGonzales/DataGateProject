@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-8 m-auto">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="home"
+          aria-selected="true">All</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" id="pending-tab" data-toggle="tab" href="#pending" role="tab" aria-controls="profile"
+          aria-selected="false">Pending</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="approved-tab" data-toggle="tab" href="#approved" role="tab" aria-controls="contact"
+          aria-selected="false">Approved</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="denied-tab" data-toggle="tab" href="#denied" role="tab" aria-controls="contact"
+          aria-selected="false">Denied</a>
+      </li> -->
+    </ul>
+    <app-information [text]="information">
+    </app-information>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+        <app-grid [data]="data">
+            <app-grid-item [text]="'DATE'" [element]="'date'"></app-grid-item>
+            <app-grid-item [text]="'REASON'" [element]="'reason'"></app-grid-item>
+            <app-grid-item [text]="'STATUS'" [element]="'status'" [status]="true"></app-grid-item>
+        </app-grid>
+      </div>
+      <div class="tab-pane fade" id="pending" role="tabpanel" aria-labelledby="pending-tab">pending</div>
+      <div class="tab-pane fade" id="approved" role="tabpanel" aria-labelledby="approved-tab">approved</div>
+      <div class="tab-pane fade" id="denied" role="tabpanel" aria-labelledby="denied-tab">approved</div>
+    </div>
+  </div>
+</div>

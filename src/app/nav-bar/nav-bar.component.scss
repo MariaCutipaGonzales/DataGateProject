@@ -1,0 +1,13 @@
+@import "../../styles.scss";
+
+.nav-item {
+    &.active {
+        background: $color-green;
+        & .nav-link {
+            color: $color-white;
+        }
+     }
+     .nav-link {
+        color: $color-green;
+    }
+}

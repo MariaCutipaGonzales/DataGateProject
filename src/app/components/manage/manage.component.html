@@ -1,0 +1,110 @@
+<section>
+  <div class="row">
+    <div class="col-10 m-auto">
+      <h1>Manage data</h1>
+    </div>
+  </div>
+  <div class="row col-10 pl-0 m-auto">
+
+
+    <div class="col-4 pl-0">
+      <app-group-list [dataGroup]="dataManage" (valueChange)="getDataByKeyName($event)"></app-group-list>
+    </div>
+    <div class="col-8">
+      <div class="tab-content" id="nav-tabContent" *ngIf="isListSelect">
+        <div class="tab-pane show active" id="list" role="tabpanel" aria-labelledby="list">
+          <div id="detail" *ngIf="!isEditable">
+            <div class="row">
+              <div class="col">
+                <h1>{{dataViewer.keyName}}</h1>
+              </div>
+              <div class="col-auto">
+                <div class="btn edit" (click)="editKeyName(dataViewer)">Edit this</div>
+              </div>
+            </div>
+            <div>
+              <span>Description</span>
+              <p>{{dataViewer.description}}</p>
+            </div>
+            <div>
+              <span>Type</span>
+              <p>{{dataViewer.type}}</p>
+            </div>
+            <div *ngIf="dataViewer.flgSensitivy">
+              <span>sensitivity</span>
+              <p>{{dataViewer.sensitivy}}</p>
+            </div>
+            <div>
+              <app-information [text]="'POSSIBLE VALUES'"></app-information>
+              <app-grid [data]="dataViewer.possibleValues">
+                <app-grid-item [text]="'Values'" [element]="'value'"></app-grid-item>
+                <app-grid-item [text]="'Description'" [element]="'description'"></app-grid-item>
+              </app-grid>
+            </div>
+          </div>
+          <div *ngIf="isEditable">
+            <form [formGroup]="editForm">
+              <div class="row">
+                <div class="form-group col">
+                  <label>Key Name</label>
+                  <input type="text" class="form-control col-sm-5" formControlName="keyName">
+                </div>
+                <div class="form-group col-auto">
+                  <div class="btn edit" (click)="updateItemManage()">Save</div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Description</label>
+                <input type="text" class="form-control" formControlName="description">
+              </div>
+
+              <div class="form-group">
+                <label>Type</label>
+                <select class="form-control" formControlName="type">
+                  <option *ngFor="let type of types" [ngValue]="type.name">{{type.name}}</option>
+                </select>
+              </div>
+
+              <div class="form-check">
+                <input formControlName="sensitivity" type="checkbox">
+                <label class="form-check-label" for="check">is this personal data ?</label>
+              </div>
+              <!-- <div class="row">
+              <div class="col">
+                <p>Key name</p>
+                <input type="text" class="form-control" formControlName="keyName">
+              </div>
+              <div class="col-auto">
+                <div class="btn edit" (click)="updateItemManage()">Save</div>
+              </div>
+            </div>
+            <div>
+              <span>Description</span>
+              <input type="text" class="form-control" formControlName="description">
+            </div>
+            <div>
+              <span>Type</span>
+              <select class="form-control" formControlName="type">
+                <option *ngFor="let type of types" [ngValue]="type.name">{{type.name}}</option>
+              </select>
+            </div>
+            <div>
+                <input formControlName="sensitivity" type="checkbox">
+              <span>is this personal data ?</span>
+            </div> -->
+              <div>
+                <app-information [text]="'POSSIBLE VALUES'"></app-information>
+                <app-grid [data]="dataViewer.possibleValues">
+                  <app-grid-item [text]="'Values'" [element]="'value'"></app-grid-item>
+                  <app-grid-item [text]="'Description'" [element]="'description'"></app-grid-item>
+                </app-grid>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
