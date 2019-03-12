@@ -1,27 +1,34 @@
-# Frontendcase
+# Frontendcase DataGate
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5.
+Este projecto permite administrar data backend vista(Manage data), y listar los requests y sus status.
+El reto fue proporcionado por Scotiabank para evaluar mis habilidades como FrontEnd Developer.
 
-## Development server
+## Requisitos
+- [x] Listado de requests y su status vista(Requests)
+- [x] Mostrar data asociada a key_name vista(Manage Data)
+- [x] Editar data asociada a key_name vista(Manage Data)
+- [x] Backend mock
+- [ ] Add posible value *opcional*
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## ¿Cómo visualizar?
 
-## Code scaffolding
+Para poder visualizar el proyecto, primero hay que desplegar el sistema:
+- Descargar este repositorio (mediante el botón **Clonar|Descargar**).
+- Instalar dependencias ejecutar comando **npm install** en la cosola.
+- Correr el proyecto ejecutar comando **npm run start:project** en la consola para iniciar el servidor.
+- En el explorador, colocar la dirección **http://localhost:4200**.
+- La aplicación se recargará automáticamente si se cambia alguno de los archivos fuente.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Implementación
 
-## Build
+Para desarrollar este proyecto, se hizo uso de Angular CLI versión ~7.2.0".
+Para simular el servidor mock, se hizo uso de json-server version 0.14.2.
+Trabajado de manera local, se hicieron las pruebas de manera interna para verificar las funcionabilidades de la misma.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+Para hacerme llegar observaciones y alcances acerca de este desarrollo, por favor sírvanse escribir a mi correo personal: mariacutipa.gonzales@gmail.com
+Siempre estoy en constante mejora, el feedback siempre es bien recibido :).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+---
+Frontendcase Data Gate, desarrollado por Maria Cutipa Gonzales. Lima, 2019.
